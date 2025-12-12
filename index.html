@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İsa Korkmaz | Frontend Developer & Yazılım Meraklısı</title>
+    <title>İsa Korkmaz</title>
     <meta name="description" content="İsa Korkmaz'ın frontend geliştirme projeleri ve yazılım yetenekleri. HTML, CSS, JavaScript ve daha fazlası.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,8 +13,8 @@
         :root {
             --bg-color: #050510;
             --card-bg: #12121f;
-            --primary: #a855f7;       /* Neon Mor */
-            --secondary: #3b82f6;     /* Neon Mavi */
+            --primary: #a855f7;       
+            --secondary: #3b82f6;     
             --text-white: #ffffff;
             --text-gray: #a1a1aa;
             --border-color: rgba(255, 255, 255, 0.1);
@@ -24,7 +24,7 @@
             margin: 0; padding: 0; box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
-            line-height: 1.6; /* Okunabilirliği artırdım */
+            line-height: 1.6;
         }
 
         body {
@@ -33,7 +33,7 @@
             overflow-x: hidden;
         }
 
-        /* Arka Plan Deseni */
+        
         body::before {
             content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 15% 50%, rgba(168, 85, 247, 0.08), transparent 25%),
@@ -41,7 +41,7 @@
             z-index: -1; pointer-events: none;
         }
 
-        /* --- NAVBAR --- */
+        
         .navbar {
             display: flex; justify-content: space-between; align-items: center;
             padding: 20px 8%; position: fixed; width: 100%; top: 0; z-index: 1000;
@@ -62,7 +62,6 @@
 
         .hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: white; }
 
-        /* --- GENEL BÖLÜM STİLLERİ --- */
         section { padding: 120px 8% 40px; min-height: 90vh; display: flex; flex-direction: column; }
         
         .section-title {
@@ -70,7 +69,6 @@
         }
         .section-title span { color: var(--primary); }
 
-        /* Animasyon Sınıfları */
         .reveal {
             opacity: 0; transform: translateY(30px); transition: all 1s ease;
         }
@@ -78,7 +76,6 @@
             opacity: 1; transform: translateY(0);
         }
 
-        /* --- HERO (ANASAYFA) --- */
         .hero {
             flex-direction: row; align-items: center; justify-content: space-between; min-height: 100vh;
         }
@@ -95,7 +92,7 @@
         .btn {
             padding: 12px 30px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: 0.3s;
             display: inline-flex; align-items: center; justify-content: center;
-            border: 2px solid; /* İyileştirme */
+            border: 2px solid; 
         }
         .btn-primary { 
             background: var(--primary); color: white; 
@@ -107,14 +104,12 @@
         .btn-secondary { border-color: var(--border-color); color: white; background: transparent; }
         .btn-secondary:hover { border-color: var(--primary); background: rgba(168, 85, 247, 0.1); transform: translateY(-3px); }
 
-        /* Sosyal İkonlar Alanı */
         .social-hero { display: flex; gap: 25px; align-items: center; }
         .social-hero a {
             font-size: 1.8rem; color: var(--text-gray); transition: 0.3s;
         }
         .social-hero a:hover { color: var(--primary); transform: translateY(-3px) scale(1.1); }
 
-        /* Hero Image */
         .hero-image-container {
             width: 350px; 
             height: 350px; 
@@ -133,7 +128,6 @@
             display: block;
         }
 
-        /* --- HAKKIMDA --- */
         .about-container {
             display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center;
         }
@@ -147,7 +141,6 @@
         .stat-item h4 { font-size: 2rem; color: var(--secondary); margin-bottom: 5px; }
         .stat-item span { color: var(--text-gray); font-size: 0.9rem; text-transform: uppercase; }
 
-        /* --- EĞİTİM (TIMELINE) --- */
         .timeline {
             max-width: 800px; margin: auto; position: relative; 
             border-left: 2px solid var(--border-color); padding-left: 30px;
@@ -166,10 +159,9 @@
         .timeline-content:hover { border-color: var(--primary); transform: translateX(5px); }
         .date { color: var(--secondary); font-size: 0.85rem; margin-bottom: 5px; display: block; font-weight: 600; }
         
-        /* CS50 Sertifika Link Stili (YENİ EKLENDİ) */
         .cs50-link {
             display: inline-flex; align-items: center; gap: 8px;
-            color: var(--secondary); /* Mavi Neon */
+            color: var(--secondary); 
             text-decoration: none; 
             font-weight: 600; 
             transition: all 0.3s ease;
@@ -177,11 +169,10 @@
             font-size: 0.95rem;
         }
         .cs50-link:hover { 
-            color: var(--primary); /* Mor Neon */
+            color: var(--primary);
             gap: 12px; 
         }
 
-        /* --- PROJELER --- */
         .project-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
         }
@@ -221,7 +212,6 @@
         .p-title { margin: 10px 0; font-size: 1.2rem; }
         .p-desc { color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px; flex-grow: 1; }
         
-        /* Proje Link Butonu */
         .project-link {
             display: inline-flex; align-items: center; gap: 8px;
             color: var(--text-white); text-decoration: none; font-weight: 500; transition: 0.3s;
@@ -231,7 +221,6 @@
         .project-link i { font-size: 0.8rem; }
 
 
-        /* --- İLETİŞİM --- */
         .contact-wrapper {
             display: flex; gap: 50px; flex-wrap: wrap; justify-content: center;
             max-width: 1000px; margin: auto;
@@ -258,13 +247,11 @@
         }
         .contact-form input:focus, .contact-form textarea:focus { border-color: var(--primary); }
 
-        /* --- FOOTER --- */
         footer {
             text-align: center; padding: 40px; border-top: 1px solid var(--border-color); margin-top: 50px; color: var(--text-gray);
             font-size: 0.9rem;
         }
 
-        /* --- RESPONSIVE (MOBİL UYUM) --- */
         @media (max-width: 900px) {
             section { padding: 100px 5% 30px; min-height: unset; }
             .navbar { padding: 15px 5%; }
@@ -394,7 +381,7 @@
                         <span class="date">2025</span>
                         <h3>Harvard Üniversitesi CS50</h3>
                         <p style="color:#aaa; font-size:0.9rem;"> 
-                            Harvard Üniversitesi CS50x (Introduction to Computer Science) programını tüm problem setlerini ve final projesini başarıyla tamamlayarak bitirdim.
+                            Harvard Üniversitesi CS50x programını tüm problem setlerini ve final projesini başarıyla tamamlayarak bitirdim.
                         </p>
                         <a href="https://certificates.cs50.io/52f116b4-f422-46fa-b3a9-01a9e5b51606.pdf?size=letter" target="_blank" class="cs50-link">
                              Sertifikayı Gör <i class="fas fa-external-link-alt"></i>
@@ -507,7 +494,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            // 1. SCROLL REVEAL ANİMASYONU
             const reveals = document.querySelectorAll('.reveal');
             
             const checkReveal = () => {
@@ -528,7 +514,6 @@
             window.addEventListener('resize', checkReveal);
             checkReveal();
 
-            // 2. MOBİL MENÜ
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
             const navItems = document.querySelectorAll('.nav-links li a');
@@ -549,7 +534,6 @@
 
             hamburger.addEventListener('click', toggleMenu);
 
-            // Menü linkine tıklanınca menüyü kapat
             navItems.forEach(item => {
                 item.addEventListener('click', () => {
                     if(navLinks.classList.contains('active')){
@@ -558,14 +542,12 @@
                 });
             });
 
-            // 3. SCROLL SPY (Aktif Link Vurgulama) İYİLEŞTİRMESİ
             const sections = document.querySelectorAll('section');
             const navLinkItems = document.querySelectorAll('.nav-links a');
 
             const activateNavLink = () => {
                 let current = 'home'; 
                 const scrollY = window.scrollY;
-                // Navbar yüksekliğini dinamik al
                 const navbarHeight = navbar.offsetHeight; 
 
                 sections.forEach(section => {
@@ -589,3 +571,4 @@
     </script>
 </body>
 </html>
+
